@@ -43,29 +43,57 @@
       </div>
 
       <div>
-        <form class="mb-0" action="" method="">
+        <form class="mb-0">
             <div class="grid grid-cols-3 gap-3 mx-8 mt-11">
                 <div class="mb-6">
                     <label for="data" class="block mb-1.5 text-sm font-semibold text-lightBlue font-[Roboto]">Date</label>
-                    <input type="text" id="data" class="bg-white border-2 border-lightBlue font-[Roboto] text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-1.8">
+                    <input 
+                    type="text" 
+                    id="date" 
+                    name="date"
+                    class="bg-white border-2 border-lightBlue font-[Roboto] text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-1.8" 
+                    placeholder="dd" 
+                    minlength="1"
+                    maxlength="2"
+                    required
+                    />
                 </div>
                 <div class="mb-6">
                     <label for="month" class="block mb-1.5 text-sm font-medium text-lightBlue font-[Roboto]">Month</label>
-                    <input type="text" id="month" class="bg-white border-2 border-lightBlue font-[Roboto] text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-1.8">
+                    <input 
+                    type="text" 
+                    id="month" 
+                    name="month"
+                    class="bg-white border-2 border-lightBlue font-[Roboto] text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-1.8" 
+                    placeholder="mm"
+                    minlength="1"
+                    maxlength="2"
+                    />
                 </div>
                 <div class="mb-6">
                     <label for="year" class="block mb-1.5 text-sm font-medium text-lightBlue font-[Roboto]">Year</label>
-                    <input type="text" id="year" class="bg-white border-2 border-lightBlue font-[Roboto] text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-1.8">
+                    <input 
+                    type="text" 
+                    id="year" 
+                    name="year"
+                    class="bg-white border-2 border-lightBlue font-[Roboto] text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-1.8" 
+                    placeholder="yy"
+                    minlength="4"
+                    maxlength="4"
+                    />
                   </div>
             </div>
             <div class="flex justify-center items-center mt-3">
-                <button type="submit" class="font-[Roboto] text-white text-sm border-2 border-transparent w-[125px] h-[39px] rounded-lg bg-blueButton hover:bg-white hover:border-2 hover:text-lightBlue ease duration-200 hover:border-lightBlue">Submit</button>
+                <button type="button" name="submit" value="submit" onclick="age()" class="font-[Roboto] text-white text-sm border-2 border-transparent w-[125px] h-[39px] rounded-lg bg-blueButton hover:bg-white hover:border-2 hover:text-lightBlue ease duration-200 hover:border-lightBlue">Submit</button>
             </div>
         </form>
         <div class="mt-8">
-            <p class="text-grayText font-[Manrope] font-medium lg:text-lg md:text-lg sm:text-base text-sm text-center mx-3 leading-4">Your Age is 16 Years 4 Months 26 Days</p>
+            <p class="text-grayText font-[Manrope] font-medium lg:text-lg md:text-lg sm:text-base text-sm text-center mx-3 leading-4" id="age"> </p>
         </div>
       </div>
     </div>
+
+    <!-------------JS---------------->
+    <script src="./js/main.js"></script>
 </body>
 </html>
