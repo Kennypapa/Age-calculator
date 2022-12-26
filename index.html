@@ -4,7 +4,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!------------css---------------->
     <link rel="stylesheet" href="./css/style.css"/>
+    <!------------Roboto-Fonts-------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!----------Flowbite-------------->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+    <!-----------Tailwind-css---------->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -13,15 +21,47 @@
               colors: {
                 clifford: '#da373d',
                 lightBlue: '#0f7fe1',
+                lightGray:'#dfdfdf',
+                deepBlue:'#0b0f66',
+                lightGrey: '#eeeeee',
+                blueButton: '#0662b7',
+                grayText: '#696d6f',
               }
             }
           }
         }
-      </script>
+    </script>
 </head>
-<body class="scroll-smooth bg-lightBlue h-[100vh]">
-    <div>
+<body class="scroll-smooth bg-lightBlue h-[100vh] flex justify-center items-center">
+    <div class="w-[430px] h-[330px] rounded-2xl bg-lightGrey">
+      <div class="bg-white border-b-2 border-lightGray h-[55px] rounded-t-2xl text-center flex justify-center items-center"> 
+         <p class="text-deepBlue font-bold text-3xl font-[Roboto]">Age Calculator</p>
+      </div>
 
+      <div>
+        <form class="mb-0">
+            <div class="grid grid-cols-3 gap-3 mx-8 mt-11">
+                <div class="mb-6">
+                    <label for="data" class="block mb-1.5 text-sm font-semibold text-lightBlue font-[Roboto]">Date</label>
+                    <input type="text" id="data" class="bg-white border-2 border-lightBlue font-[Roboto] text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-1.8">
+                </div>
+                <div class="mb-6">
+                    <label for="month" class="block mb-1.5 text-sm font-medium text-lightBlue font-[Roboto]">Month</label>
+                    <input type="text" id="month" class="bg-white border-2 border-lightBlue font-[Roboto] text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-1.8">
+                </div>
+                <div class="mb-6">
+                    <label for="year" class="block mb-1.5 text-sm font-medium text-lightBlue font-[Roboto]">Year</label>
+                    <input type="text" id="year" class="bg-white border-2 border-lightBlue font-[Roboto] text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-1.8">
+                  </div>
+            </div>
+            <div class="flex justify-center items-center mt-3">
+                <button type="submit" class="font-[Roboto] text-white text-sm border-2 border-transparent w-[125px] h-[39px] rounded-lg bg-blueButton hover:bg-white hover:border-2 hover:text-lightBlue ease duration-200 hover:border-lightBlue">Submit</button>
+            </div>
+        </form>
+        <div class="mt-8">
+            <p class="text-grayText font-[Roboto] font-medium text-lg text-center">Your Age is 16 Years 4 Months 26 Days</p>
+        </div>
+      </div>
     </div>
 </body>
 </html>
